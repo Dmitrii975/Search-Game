@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchGameTest"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/QuestionField"
+        android:layout_width="match_parent"
+        android:layout_height="200sp"
+        android:gravity="center"
+        style="@style/MainText">
+    </TextView>
+
+    <TextView
+        android:id="@+id/AnswerField1"
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        android:layout_marginTop="50sp"
+        android:gravity="center"
+        style = "@style/MainText">
+    </TextView>
+
+    <TextView
+        android:id="@+id/AnswerField2"
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        android:layout_marginTop="50sp"
+        android:gravity="center"
+        style="@style/MainText">
+    </TextView>
+
+    <TextView
+        android:id="@+id/AnswerField3"
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        android:layout_marginTop="50sp"
+        android:gravity="center"
+        style="@style/MainText">
+    </TextView>
+    <TextView
+        android:id="@+id/ButtonNext"
+        android:gravity="center"
+        android:layout_width="100sp"
+        android:layout_height="70sp"
+        android:text="@string/next"
+        android:layout_marginStart="300sp"
+        android:textColor="@android:color/black"
+        android:textStyle="italic">
+    </TextView>
+
+<!--    <com.google.android.gms.ads.AdView-->
+<!--        xmlns:ads="http://schemas.android.com/apk/res-auto"-->
+<!--        android:id="@+id/adView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        ads:adSize="BANNER"-->
+<!--        ads:adUnitId="ca-app-pub-1527580176019846/2904680610">-->
+<!--    </com.google.android.gms.ads.AdView>-->
+
+</LinearLayout>
