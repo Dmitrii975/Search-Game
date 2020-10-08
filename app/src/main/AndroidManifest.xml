@@ -12,17 +12,36 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Choose_Test">
+            <intent-filter>
+                <action android:name="android.intent.action.Choose_Test" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Training" >
+            <intent-filter>
+                <action android:name="android.intent.action.Training" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-1527580176019846~4563562438">
-        </meta-data>
-
-        <activity android:name=".SearchGameTest">
+            android:value="ca-app-pub-1527580176019846~4563562438" />
+        <activity android:name=".StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SearchGameTest">
+            <intent-filter>
+                <action android:name="android.intent.action.SearchGameTest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
     </application>

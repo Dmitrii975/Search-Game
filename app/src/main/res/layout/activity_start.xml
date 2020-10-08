@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fon"
+    tools:context=".StartActivity">
+
+    <Button
+    android:text="@string/Start"
+    android:id="@+id/ButtonStart"
+    android:layout_width="200sp"
+    android:layout_height="50sp"
+    android:background="@android:color/white"
+    android:layout_marginTop="400sp"
+    android:layout_marginStart="100sp"
+    android:textStyle="italic"
+    android:textColor="@android:color/black">
+    </Button>
+
+    <Button
+        android:text="@string/Training"
+        android:id="@+id/ButtonTraining"
+        android:layout_width="200sp"
+        android:layout_height="50sp"
+        android:background="@android:color/white"
+        android:layout_marginTop="30sp"
+        android:layout_marginStart="100sp"
+        android:textStyle="italic"
+        android:textColor="@android:color/black">
+    </Button>
+
+</LinearLayout>

@@ -9,46 +9,46 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/QuestionField"
+        android:id="@+id/questionField"
         android:layout_width="match_parent"
-        android:layout_height="200sp"
+        android:layout_height="200dp"
         android:gravity="center"
         style="@style/MainText">
     </TextView>
 
     <TextView
-        android:id="@+id/AnswerField1"
+        android:id="@+id/answerField1"
         android:layout_width="match_parent"
-        android:layout_height="100sp"
-        android:layout_marginTop="50sp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
         android:gravity="center"
         style = "@style/MainText">
     </TextView>
 
     <TextView
-        android:id="@+id/AnswerField2"
+        android:id="@+id/answerField2"
         android:layout_width="match_parent"
-        android:layout_height="100sp"
-        android:layout_marginTop="50sp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
         android:gravity="center"
         style="@style/MainText">
     </TextView>
 
     <TextView
-        android:id="@+id/AnswerField3"
+        android:id="@+id/answerField3"
         android:layout_width="match_parent"
-        android:layout_height="100sp"
-        android:layout_marginTop="50sp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
         android:gravity="center"
         style="@style/MainText">
     </TextView>
     <TextView
-        android:id="@+id/ButtonNext"
+        android:id="@+id/buttonNext"
         android:gravity="center"
-        android:layout_width="100sp"
-        android:layout_height="70sp"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
         android:text="@string/next"
-        android:layout_marginStart="300sp"
+        android:layout_marginStart="300dp"
         android:textColor="@android:color/black"
         android:textStyle="italic">
     </TextView>
