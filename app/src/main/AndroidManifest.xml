@@ -12,14 +12,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Choose_Test">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-1527580176019846~4563562438" />
+
+        <activity android:name=".searchgametest.SearchGameFinish">
             <intent-filter>
-                <action android:name="android.intent.action.Choose_Test" />
+                <action android:name="android.intent.action.SearchGameFinish" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Training" >
+        <activity android:name=".searchgametest.Choose_Test">
+            <intent-filter>
+                <action android:name="android.intent.action.Choose_Test" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".searchgametest.Training">
             <intent-filter>
                 <action android:name="android.intent.action.Training" />
 
@@ -27,20 +38,17 @@
             </intent-filter>
         </activity>
 
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-1527580176019846~4563562438" />
-        <activity android:name=".StartActivity">
+        <activity android:name=".searchgametest.StartActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SearchGameTest">
+
+        <activity android:name=".searchgametest.SearchGameTest">
             <intent-filter>
                 <action android:name="android.intent.action.SearchGameTest" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

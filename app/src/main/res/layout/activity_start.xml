@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/fon"
-    tools:context=".StartActivity">
+    tools:context=".searchgametest.StartActivity">
 
     <Button
     android:text="@string/Start"

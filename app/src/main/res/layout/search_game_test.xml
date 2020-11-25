@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:id="@+id/search_game_test_view"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SearchGameTest"
+    tools:context=".searchgametest.SearchGameTest"
     android:orientation="vertical">
 
     <TextView
@@ -13,45 +14,53 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:gravity="center"
-        style="@style/MainText">
+        android:textStyle="italic"
+        android:textColor="@android:color/black"
+        android:layout_margin="15dp"
+        android:textSize="20sp"
+        android:background="@drawable/buttons">
     </TextView>
 
-    <TextView
+    <Button
         android:id="@+id/answerField1"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginTop="50dp"
         android:gravity="center"
-        style = "@style/MainText">
-    </TextView>
+        style = "@style/MainText"
+        android:background="@drawable/buttons">
+    </Button>
 
-    <TextView
+    <Button
         android:id="@+id/answerField2"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginTop="50dp"
         android:gravity="center"
-        style="@style/MainText">
-    </TextView>
+        style="@style/MainText"
+        android:background="@drawable/buttons">
+    </Button>
 
-    <TextView
+    <Button
         android:id="@+id/answerField3"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginTop="50dp"
         android:gravity="center"
-        style="@style/MainText">
-    </TextView>
-    <TextView
+        style="@style/MainText"
+        android:background="@drawable/buttons">
+    </Button>
+    <Button
         android:id="@+id/buttonNext"
         android:gravity="center"
         android:layout_width="100dp"
         android:layout_height="70dp"
         android:text="@string/next"
-        android:layout_marginStart="300dp"
+        android:layout_marginStart="280dp"
         android:textColor="@android:color/black"
-        android:textStyle="italic">
-    </TextView>
+        android:textStyle="italic"
+        android:background="@drawable/buttons">
+    </Button>
 
 <!--    <com.google.android.gms.ads.AdView-->
 <!--        xmlns:ads="http://schemas.android.com/apk/res-auto"-->

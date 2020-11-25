@@ -4,4 +4,6 @@
     <string name="Start">Начать</string>
     <string name="Training">Обучение</string>
     <string name="back">Назад</string>
+    <string name="FinishTextSearchGame">Поздравляю! Вы прошли тест Search Game!</string>
+    <string name="Back">Вернутся</string>
 </resources>
