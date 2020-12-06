@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:id="@+id/search_game_test_view"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,49 +10,68 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/QuestionField"
+        android:id="@+id/questionField"
         android:layout_width="match_parent"
-        android:layout_height="200sp"
+        android:layout_height="200dp"
         android:gravity="center"
-        style="@style/MainText">
-    </TextView>
-
-    <TextView
-        android:id="@+id/AnswerField1"
-        android:layout_width="match_parent"
-        android:layout_height="100sp"
-        android:layout_marginTop="50sp"
-        android:gravity="center"
-        style = "@style/MainText">
-    </TextView>
-
-    <TextView
-        android:id="@+id/AnswerField2"
-        android:layout_width="match_parent"
-        android:layout_height="100sp"
-        android:layout_marginTop="50sp"
-        android:gravity="center"
-        style="@style/MainText">
-    </TextView>
-
-    <TextView
-        android:id="@+id/AnswerField3"
-        android:layout_width="match_parent"
-        android:layout_height="100sp"
-        android:layout_marginTop="50sp"
-        android:gravity="center"
-        style="@style/MainText">
-    </TextView>
-    <Button
-        android:id="@+id/ButtonNext"
-        android:gravity="center"
-        android:layout_width="100sp"
-        android:layout_height="70sp"
-        android:text="@string/back"
-        android:layout_marginStart="300sp"
+        android:textStyle="italic"
         android:textColor="@android:color/black"
-        android:textStyle="italic">
-    </Button>
+        android:fontFamily="@font/regular"
+        android:layout_margin="20dp"
+        android:textSize="20sp"
+        android:background="@drawable/buttons"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/answerField1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        style = "@style/MainText"
+        android:fontFamily="@font/regular"
+        android:background="@drawable/buttons"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/answerField2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        style="@style/MainText"
+        android:fontFamily="@font/regular"
+        android:background="@drawable/buttons"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/answerField3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        style="@style/MainText"
+        android:fontFamily="@font/regular"
+        android:background="@drawable/buttons"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+    </TextView>
+    <TextView
+        android:id="@+id/buttonNext"
+        android:gravity="center"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:text="@string/next"
+        android:layout_marginStart="280dp"
+        android:textColor="@android:color/black"
+        android:fontFamily="@font/regular"
+        android:background="@drawable/buttons"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+    </TextView>
 
     <!--    <com.google.android.gms.ads.AdView-->
     <!--        xmlns:ads="http://schemas.android.com/apk/res-auto"-->

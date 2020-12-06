@@ -3,11 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/fon">
+    android:background="@drawable/fon2">
 
     <ListView
         android:id="@android:id/list"
-        android:layout_marginTop="300sp"
+        android:layout_marginTop="220sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -18,6 +18,7 @@
     android:layout_marginTop="400sp"
     android:layout_marginStart="100sp"
     android:textStyle="italic"
+        android:fontFamily="@font/regular"
     android:textColor="@android:color/black">
     </Button>
 
@@ -27,10 +28,11 @@
         android:layout_width="200sp"
         android:layout_height="50sp"
         android:background="@android:color/white"
-        android:layout_marginTop="30sp"
+        android:layout_marginTop="500sp"
         android:layout_marginStart="100sp"
         android:textStyle="italic"
+        android:fontFamily="@font/regular"
         android:textColor="@android:color/black">
     </Button>
 
-</LinearLayout>
+</RelativeLayout>

@@ -16,41 +16,50 @@
         android:gravity="center"
         android:textStyle="italic"
         android:textColor="@android:color/black"
-        android:layout_margin="15dp"
+        android:fontFamily="@font/regular"
+        android:layout_margin="20dp"
         android:textSize="20sp"
-        android:background="@drawable/buttons">
+        android:background="@drawable/buttons"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
     </TextView>
 
-    <Button
+    <TextView
         android:id="@+id/answerField1"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_marginTop="50dp"
         android:gravity="center"
         style = "@style/MainText"
-        android:background="@drawable/buttons">
-    </Button>
+        android:fontFamily="@font/regular"
+        android:background="@drawable/buttons"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+    </TextView>
 
-    <Button
+    <TextView
         android:id="@+id/answerField2"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_marginTop="50dp"
         android:gravity="center"
         style="@style/MainText"
-        android:background="@drawable/buttons">
-    </Button>
+        android:fontFamily="@font/regular"
+        android:background="@drawable/buttons"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+    </TextView>
 
-    <Button
+    <TextView
         android:id="@+id/answerField3"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_marginTop="50dp"
         android:gravity="center"
         style="@style/MainText"
-        android:background="@drawable/buttons">
-    </Button>
-    <Button
+        android:fontFamily="@font/regular"
+        android:background="@drawable/buttons"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+    </TextView>
+    <TextView
         android:id="@+id/buttonNext"
         android:gravity="center"
         android:layout_width="100dp"
@@ -58,9 +67,11 @@
         android:text="@string/next"
         android:layout_marginStart="280dp"
         android:textColor="@android:color/black"
-        android:textStyle="italic"
-        android:background="@drawable/buttons">
-    </Button>
+        android:fontFamily="@font/regular"
+        android:background="@drawable/buttons"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+    </TextView>
 
 <!--    <com.google.android.gms.ads.AdView-->
 <!--        xmlns:ads="http://schemas.android.com/apk/res-auto"-->
