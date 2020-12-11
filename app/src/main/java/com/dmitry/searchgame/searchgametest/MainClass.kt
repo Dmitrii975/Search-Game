@@ -4,10 +4,9 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.TextView
 import androidx.core.content.ContextCompat.startActivity
-import java.util.*
+import android.content.SharedPreferences
 
 class MainClass
 {
@@ -24,6 +23,7 @@ class MainClass
              context: Context,
             isEnd: Boolean) {
 
+            buttonNext.setOnClickListener {  }
             if (isEnd){
                 val i = Intent(context, SearchGameFinish::class.java)
                     val b: Bundle? = i.extras
@@ -58,6 +58,13 @@ class MainClass
                     answerField1.isClickable = false
                     answerField2.isClickable = false
                     answerField3.isClickable = false
+                        buttonNext.setOnClickListener {
+                            counter++
+                            if (counter == questions.size)
+                                main( buttonNext, questionField, answerField1, answerField2, answerField3, questions, answers, context, true)
+                            else
+                                main( buttonNext, questionField, answerField1, answerField2, answerField3, questions, answers, context, false)
+                        }
             }
                 answerField2.setOnClickListener {
                     questionField.text = "Увы, ответ не верный"
@@ -67,6 +74,13 @@ class MainClass
                     answerField1.isClickable = false
                     answerField2.isClickable = false
                     answerField3.isClickable = false
+                    buttonNext.setOnClickListener {
+                        counter++
+                        if (counter == questions.size)
+                            main( buttonNext, questionField, answerField1, answerField2, answerField3, questions, answers, context, true)
+                        else
+                            main( buttonNext, questionField, answerField1, answerField2, answerField3, questions, answers, context, false)
+                    }
             }
                 answerField3.setOnClickListener {
                     questionField.text = "Увы, ответ не верный"
@@ -76,6 +90,13 @@ class MainClass
                     answerField1.isClickable = false
                     answerField2.isClickable = false
                     answerField3.isClickable = false
+                    buttonNext.setOnClickListener {
+                        counter++
+                        if (counter == questions.size)
+                            main( buttonNext, questionField, answerField1, answerField2, answerField3, questions, answers, context, true)
+                        else
+                            main( buttonNext, questionField, answerField1, answerField2, answerField3, questions, answers, context, false)
+                    }
             }
                 }
                 2 -> {
@@ -87,6 +108,13 @@ class MainClass
                         answerField1.isClickable = false
                         answerField2.isClickable = false
                         answerField3.isClickable = false
+                        buttonNext.setOnClickListener {
+                            counter++
+                            if (counter == questions.size)
+                                main( buttonNext, questionField, answerField1, answerField2, answerField3, questions, answers, context, true)
+                            else
+                                main( buttonNext, questionField, answerField1, answerField2, answerField3, questions, answers, context, false)
+                        }
                     }
                     answerField1.setOnClickListener {
                         questionField.text = "Увы, ответ не верный"
@@ -96,6 +124,13 @@ class MainClass
                         answerField1.isClickable = false
                         answerField2.isClickable = false
                         answerField3.isClickable = false
+                        buttonNext.setOnClickListener {
+                            counter++
+                            if (counter == questions.size)
+                                main( buttonNext, questionField, answerField1, answerField2, answerField3, questions, answers, context, true)
+                            else
+                                main( buttonNext, questionField, answerField1, answerField2, answerField3, questions, answers, context, false)
+                        }
                     }
                     answerField3.setOnClickListener {
                         questionField.text = "Увы, ответ не верный"
@@ -105,6 +140,13 @@ class MainClass
                         answerField1.isClickable = false
                         answerField2.isClickable = false
                         answerField3.isClickable = false
+                        buttonNext.setOnClickListener {
+                            counter++
+                            if (counter == questions.size)
+                                main( buttonNext, questionField, answerField1, answerField2, answerField3, questions, answers, context, true)
+                            else
+                                main( buttonNext, questionField, answerField1, answerField2, answerField3, questions, answers, context, false)
+                        }
                     }
                 }
                 3 -> {
@@ -116,6 +158,13 @@ class MainClass
                         answerField1.isClickable = false
                         answerField2.isClickable = false
                         answerField3.isClickable = false
+                        buttonNext.setOnClickListener {
+                            counter++
+                            if (counter == questions.size)
+                                main( buttonNext, questionField, answerField1, answerField2, answerField3, questions, answers, context, true)
+                            else
+                                main( buttonNext, questionField, answerField1, answerField2, answerField3, questions, answers, context, false)
+                        }
                     }
                     answerField2.setOnClickListener {
                         questionField.text = "Увы, ответ не верный"
@@ -125,6 +174,13 @@ class MainClass
                         answerField1.isClickable = false
                         answerField2.isClickable = false
                         answerField3.isClickable = false
+                            buttonNext.setOnClickListener {
+                                counter++
+                                if (counter == questions.size)
+                                    main( buttonNext, questionField, answerField1, answerField2, answerField3, questions, answers, context, true)
+                                else
+                                    main( buttonNext, questionField, answerField1, answerField2, answerField3, questions, answers, context, false)
+                            }
                     }
                     answerField1.setOnClickListener {
                         questionField.text = "Увы, ответ не верный"
@@ -134,16 +190,17 @@ class MainClass
                         answerField1.isClickable = false
                         answerField2.isClickable = false
                         answerField3.isClickable = false
+                        buttonNext.setOnClickListener {
+                            counter++
+                            if (counter == questions.size)
+                                main( buttonNext, questionField, answerField1, answerField2, answerField3, questions, answers, context, true)
+                            else
+                                main( buttonNext, questionField, answerField1, answerField2, answerField3, questions, answers, context, false)
+                        }
                     }
                 }
             }
-            buttonNext.setOnClickListener {
-                counter++
-                if (counter == questions.size)
-                    main( buttonNext, questionField, answerField1, answerField2, answerField3, questions, answers, context, true)
-                else
-                    main( buttonNext, questionField, answerField1, answerField2, answerField3, questions, answers, context, false)
-            }
+
     }
     private fun getField(q1: Array<String>, q2: Array<Array<String>>): Int {
         return when {

@@ -59,21 +59,24 @@
         android:paddingLeft="10dp"
         android:paddingRight="10dp">
     </TextView>
+
     <TextView
         android:id="@+id/buttonNext"
-        android:gravity="center"
         android:layout_width="100dp"
         android:layout_height="70dp"
-        android:text="@string/next"
         android:layout_marginStart="280dp"
-        android:textColor="@android:color/black"
+        android:background="@drawable/btn_ripple"
         android:fontFamily="@font/regular"
-        android:background="@drawable/buttons"
+        android:gravity="center"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp">
+        android:paddingRight="10dp"
+        android:text="@string/next"
+        android:textColor="@android:color/black">
     </TextView>
 
-<!--    <com.google.android.gms.ads.AdView-->
+
+
+    <!--    <com.google.android.gms.ads.AdView-->
 <!--        xmlns:ads="http://schemas.android.com/apk/res-auto"-->
 <!--        android:id="@+id/adView"-->
 <!--        android:layout_width="wrap_content"-->

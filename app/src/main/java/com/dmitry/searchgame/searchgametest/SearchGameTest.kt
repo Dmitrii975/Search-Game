@@ -1,21 +1,23 @@
 package com.dmitry.searchgame.searchgametest
 
 import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.dmitry.searchgame.R
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.MobileAds
+import com.google.android.gms.ads.reward.RewardedVideoAd
+import com.google.android.gms.ads.reward.RewardedVideoAdListener
 import kotlinx.android.synthetic.main.search_game_test.*
 
-class SearchGameTest : AppCompatActivity() {
-    //    lateinit var mAdView : AdView
+
+class SearchGameTest : AppCompatActivity(), RewardedVideoAdListener {
+    private lateinit var mRewardedVideoAd: RewardedVideoAd
     private val context: Context = this
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.search_game_test)
-//            MobileAds.initialize(this){}
-//                mAdView = findViewById(R.id.adView)
-//                    val adRequest = AdRequest.Builder().build()
-//                        mAdView.loadAd(adRequest)
         val answer: Array<Array<String>> = Array(15)
         {
             Array(3)
@@ -72,5 +74,42 @@ class SearchGameTest : AppCompatActivity() {
                 context,
                 false)
     }
+    private fun loadRewardedVideoAd() {
+        mRewardedVideoAd.loadAd(
+            "ca-app-pub-3940256099942544/5224354917",
+            AdRequest.Builder().build()
+        )
+    }
 
+    override fun onRewarded(p0: com.google.android.gms.ads.reward.RewardItem?) {
+        Toast.makeText(this, "Все в поряде", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onRewardedVideoAdLeftApplication() {
+        Toast.makeText(this, "onRewardedVideoAdLeftApplication", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onRewardedVideoAdClosed() {
+        Toast.makeText(this, "onRewardedVideoAdClosed", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onRewardedVideoAdFailedToLoad(errorCode: Int) {
+        Toast.makeText(this, "onRewardedVideoAdFailedToLoad", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onRewardedVideoAdLoaded() {
+        Toast.makeText(this, "onRewardedVideoAdLoaded", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onRewardedVideoAdOpened() {
+        Toast.makeText(this, "onRewardedVideoAdOpened", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onRewardedVideoStarted() {
+        Toast.makeText(this, "onRewardedVideoStarted", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onRewardedVideoCompleted() {
+        Toast.makeText(this, "onRewardedVideoCompleted", Toast.LENGTH_SHORT).show()
+    }
 }
