@@ -14,41 +14,47 @@ import kotlinx.android.synthetic.main.activity_training.*
 class Training : AppCompatActivity() {
     private val context: Context = this
     private var counter = 0
+    val q: Array<String> = Array(1){ "" }
+    val a: Array<Array<String>> = Array(15)
+    {
+        Array(3)
+        {
+            ""
+        }
+    }
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_training)
-        questionField.text = "Приветствую тебя в Search Game! В этой игре тебе " +
-                "предстоит проходить тесты на разные темы. Надеюсь тебе понравится)"
-        buttonNext.text = "Понятно"
+
+        buttonNext.setOnClickListener {}
+
+        buttonRestart.isClickable = false
+        buttonRestart.isEnabled = false
+
+        q[0] = "2 + 2 * 2"
+        a[0] = arrayOf("6","8","4")
+
+        questionField.text = resources.getString(R.string.Hello)
+        buttonNext.text = resources.getString(R.string.Understand)
 
         buttonNext.setOnClickListener {
-            questionField.text = "Ок, сейчас покажу тебе небольшую схему что и где."
-            buttonNext.text = "Ок"
+            questionField.text = resources.getString(R.string.Show)
+            buttonNext.text = resources.getString(R.string.Good)
                 buttonNext.setOnClickListener {
-                    questionField.text = "Вопрос"
-                        answerField1.text = "Вариант ответа 1"
-                            answerField2.text = "Вариант ответа 2"
-                                answerField3.text = "Вариант ответа 3"
-                                    buttonNext.text = "Уяснил(а)"
+                    questionField.text = resources.getString(R.string.Question)
+                        answerField1.text = resources.getString(R.string.Variant1)
+                            answerField2.text = resources.getString(R.string.Variant2)
+                                answerField3.text = resources.getString(R.string.Variant3)
+                                    buttonNext.text = resources.getString(R.string.Understand2)
                     buttonNext.setOnClickListener {
-                        questionField.text = "Теперь ты все знаешь давай-ка ответим на один вопрос."
+                        questionField.text = resources.getString(R.string.Lets_ask_one_question)
                             answerField1.text = ""
                                 answerField2.text = ""
                                     answerField3.text = ""
-                                        buttonNext.text = "Давай"
+                                        buttonNext.text = resources.getString(R.string.Lets_go)
                         buttonNext.setOnClickListener {
-                            val q: Array<String> = Array(1){ "" }
-                            q[0] = "2 + 2 * 2"
-                            val a: Array<Array<String>> = Array(15)
-                            {
-                                Array(3)
-                                {
-                                    ""
-                                }
-                            }
-                            a[0] = arrayOf("6","8","4")
-                            main2(buttonNext, questionField, answerField1, answerField2, answerField3, q,a,context, false)
+                            main2(buttonNext, questionField, answerField1, answerField2, answerField3, q,a)
 //                            buttonNext.setOnClickListener {
 //                                questionField.text = "Обучение пройдено"
 //                                answerField1.text = ""
@@ -63,22 +69,13 @@ class Training : AppCompatActivity() {
                 }
         }
     }
-    fun main2(buttonNext: TextView,
-             questionField: TextView,
-             answerField1: TextView,
-             answerField2: TextView,
-             answerField3: TextView,
-             questions: Array<String>,
-             answers: Array<Array<String>>,
-             context: Context,
-             isEnd: Boolean) {
-
-        if (isEnd) {
-            val i = Intent(context, StartActivity::class.java)
-            val b: Bundle? = i.extras
-            ContextCompat.startActivity(context, i, b)
-            return
-        }
+    private fun main2(buttonNext: TextView,
+                      questionField: TextView,
+                      answerField1: TextView,
+                      answerField2: TextView,
+                      answerField3: TextView,
+                      questions: Array<String>,
+                      answers: Array<Array<String>>) {
 
         questionField.text = questions[counter]
         answerField1.text = answers[counter][0]
@@ -88,58 +85,57 @@ class Training : AppCompatActivity() {
         answerField2.isClickable = true
         answerField3.isClickable = true
         answerField1.setOnClickListener {
-            questionField.text = "Ответ верный."
+            questionField.text = resources.getString(R.string.True)
             answerField1.text = ""
             answerField2.text = ""
             answerField3.text = ""
             answerField1.isClickable = false
             answerField2.isClickable = false
             answerField3.isClickable = false
+            buttonNext.setOnClickListener {
+                val intent = Intent(this, StartActivity::class.java)
+                startActivity(intent)
+            }
         }
         answerField2.setOnClickListener {
-            questionField.text = "Увы, ответ не верный"
+            questionField.text = resources.getString(R.string.False)
             answerField1.text = ""
             answerField2.text = ""
             answerField3.text = ""
             answerField1.isClickable = false
             answerField2.isClickable = false
             answerField3.isClickable = false
+
+            buttonRestart.isClickable = true
+            buttonRestart.isEnabled = true
+
+            buttonRestart.setOnClickListener {
+                main2(buttonNext, questionField, answerField1, answerField2, answerField3, q,a)
+            }
+            buttonNext.setOnClickListener {
+                val intent = Intent(this, StartActivity::class.java)
+                startActivity(intent)
+            }
         }
         answerField3.setOnClickListener {
-            questionField.text = "Увы, ответ не верный"
+            questionField.text = resources.getString(R.string.False)
             answerField1.text = ""
             answerField2.text = ""
             answerField3.text = ""
             answerField1.isClickable = false
             answerField2.isClickable = false
             answerField3.isClickable = false
-        }
-        buttonNext.setOnClickListener {
-            counter++
-            if (counter == questions.size)
-                main2(
-                    buttonNext,
-                    questionField,
-                    answerField1,
-                    answerField2,
-                    answerField3,
-                    questions,
-                    answers,
-                    context,
-                    true
-                )
-            else
-                main2(
-                    buttonNext,
-                    questionField,
-                    answerField1,
-                    answerField2,
-                    answerField3,
-                    questions,
-                    answers,
-                    context,
-                    false
-                )
+
+            buttonRestart.isClickable = true
+            buttonRestart.isEnabled = true
+
+            buttonRestart.setOnClickListener {
+                main2(buttonNext, questionField, answerField1, answerField2, answerField3, q,a)
+            }
+            buttonNext.setOnClickListener {
+                val intent = Intent(this, StartActivity::class.java)
+                startActivity(intent)
+            }
         }
     }
 }

@@ -7,11 +7,13 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.core.content.ContextCompat.startActivity
 import android.content.SharedPreferences
+import com.dmitry.searchgame.R
 
 class MainClass
 {
     private var counter = 0
     private val array: Array<String> = Array<String>(3){ "" }
+
     @SuppressLint("SetTextI18n")
     fun main(buttonNext: TextView,
              questionField: TextView,
@@ -51,7 +53,7 @@ class MainClass
             when (getField(array, answers)){
                 1 -> {
                     answerField1.setOnClickListener {
-                    questionField.text = "Ответ верный."
+                    questionField.text = context.resources.getString(R.string.True)
                     answerField1.text = ""
                     answerField2.text = ""
                     answerField3.text = ""
@@ -67,7 +69,7 @@ class MainClass
                         }
             }
                 answerField2.setOnClickListener {
-                    questionField.text = "Увы, ответ не верный"
+                    questionField.text = context.resources.getString(R.string.False)
                     answerField1.text = ""
                     answerField2.text = ""
                     answerField3.text = ""
@@ -83,7 +85,7 @@ class MainClass
                     }
             }
                 answerField3.setOnClickListener {
-                    questionField.text = "Увы, ответ не верный"
+                    questionField.text = context.resources.getString(R.string.False)
                     answerField1.text = ""
                     answerField2.text = ""
                     answerField3.text = ""
@@ -101,7 +103,7 @@ class MainClass
                 }
                 2 -> {
                     answerField2.setOnClickListener {
-                        questionField.text = "Ответ верный."
+                        questionField.text = context.resources.getString(R.string.True)
                         answerField1.text = ""
                         answerField2.text = ""
                         answerField3.text = ""
@@ -117,7 +119,7 @@ class MainClass
                         }
                     }
                     answerField1.setOnClickListener {
-                        questionField.text = "Увы, ответ не верный"
+                        questionField.text = context.resources.getString(R.string.False)
                         answerField1.text = ""
                         answerField2.text = ""
                         answerField3.text = ""
@@ -133,7 +135,7 @@ class MainClass
                         }
                     }
                     answerField3.setOnClickListener {
-                        questionField.text = "Увы, ответ не верный"
+                        questionField.text = context.resources.getString(R.string.False)
                         answerField1.text = ""
                         answerField2.text = ""
                         answerField3.text = ""
@@ -151,7 +153,7 @@ class MainClass
                 }
                 3 -> {
                     answerField3.setOnClickListener {
-                        questionField.text = "Ответ верный."
+                        questionField.text = context.resources.getString(R.string.True)
                         answerField1.text = ""
                         answerField2.text = ""
                         answerField3.text = ""
@@ -167,7 +169,7 @@ class MainClass
                         }
                     }
                     answerField2.setOnClickListener {
-                        questionField.text = "Увы, ответ не верный"
+                        questionField.text = context.resources.getString(R.string.False)
                         answerField1.text = ""
                         answerField2.text = ""
                         answerField3.text = ""
@@ -183,7 +185,7 @@ class MainClass
                             }
                     }
                     answerField1.setOnClickListener {
-                        questionField.text = "Увы, ответ не верный"
+                        questionField.text = context.resources.getString(R.string.False)
                         answerField1.text = ""
                         answerField2.text = ""
                         answerField3.text = ""

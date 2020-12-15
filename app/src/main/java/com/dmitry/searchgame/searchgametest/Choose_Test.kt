@@ -12,7 +12,7 @@ class Choose_Test : ListActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_choose_test)
-            val array: Array<String> = arrayOf("Search Game")
+            val array: Array<String> = arrayOf(resources.getString(R.string.Search_Game))
                 val adapter = ArrayAdapter(this, R.layout.list_item_custom, array)
                     listAdapter = adapter
     }

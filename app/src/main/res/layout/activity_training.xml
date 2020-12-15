@@ -59,19 +59,47 @@
         android:paddingLeft="10dp"
         android:paddingRight="10dp">
     </TextView>
-    <TextView
-        android:id="@+id/buttonNext"
-        android:gravity="center"
-        android:layout_width="100dp"
-        android:layout_height="70dp"
-        android:text="@string/next"
-        android:layout_marginStart="280dp"
-        android:textColor="@android:color/black"
-        android:fontFamily="@font/regular"
-        android:background="@drawable/buttons"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp">
-    </TextView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/buttonRestart"
+                android:enabled="false"
+                android:layout_width="100dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/buttons"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/restart"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="-5dp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/buttonNext"
+                android:gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="70dp"
+                android:text="@string/come_back"
+                android:layout_marginStart="175dp"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/regular"
+                android:background="@drawable/buttons"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+            </TextView>
+
+        </LinearLayout>
+    </RelativeLayout>
 
     <!--    <com.google.android.gms.ads.AdView-->
     <!--        xmlns:ads="http://schemas.android.com/apk/res-auto"-->

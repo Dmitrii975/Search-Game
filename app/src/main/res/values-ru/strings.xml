@@ -1,12 +1,12 @@
 <resources>
     <!-- Основные string'и -->
     <string name="app_name">Quiz Game</string>
-    <string name="Start">Start</string>
-    <string name="Training">Training</string>
-    <string name="back">Back</string>
-    <string name="FinishTextSearchGame">Congratulations! You passed the test Search Game.</string>
-    <string name="Back">Back</string>
-    <string name="True">Well, answer is true</string>
+    <string name="Start">Начать</string>
+    <string name="Training">Обучение</string>
+    <string name="back">Назад</string>
+    <string name="FinishTextSearchGame">Поздравляю! Вы прошли тест Search Game!</string>
+    <string name="Back">Вернутся</string>
+    <string name="True">Отлично, ответ верный</string>
     <string name="False">Увы, ответ не верный</string>
     <string name="Search_Game">Search Game</string>
 
