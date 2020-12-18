@@ -6,104 +6,104 @@
     <string name="back">Back</string>
     <string name="FinishTextSearchGame">Congratulations! You passed the test Search Game.</string>
     <string name="Back">Back</string>
-    <string name="True">Well, answer is true</string>
-    <string name="False">Увы, ответ не верный</string>
+    <string name="True">Well, answer is true.</string>
+    <string name="False">Alas, the answer is not correct.</string>
     <string name="Search_Game">Search Game</string>
 
      Для обучения
-    <string name="Hello">Приветствую тебя в Search Game! В этой игре тебе предстоит проходить тесты на разные темы. Надеюсь тебе понравится.</string>
-    <string name="Understand">Понятно</string>
-    <string name="Question">Вопрос</string>
-    <string name="Show">Ок, сейчас покажу тебе небольшую схему что и где.</string>
-    <string name="restart">Пробовать заново</string>
-    <string name="come_back">Вернутся обратно</string>
-    <string name="Good">Хорошо</string>
-    <string name="Variant1">Вариант ответа 1</string>
-    <string name="Variant2">Вариант ответа 2</string>
-    <string name="Variant3">Вариант ответа 3</string>
-    <string name="Understand2">Уяснил(а)</string>
-    <string name="Lets_ask_one_question">Теперь ты все знаешь давай-ка ответим на один вопрос.</string>
-    <string name="Lets_go">Давай</string>
+    <string name="Hello">Welcome to Search Game! In this game you have to take tests on various topics. I hope, you like it.</string>
+    <string name="Understand">Understandably</string>
+    <string name="Question">Question</string>
+    <string name="Show">OK, now I will show you a small diagram of what and where.</string>
+    <string name="restart">Try again</string>
+    <string name="come_back">Go back</string>
+    <string name="Good">Well</string>
+    <string name="Variant1">Answer option 1</string>
+    <string name="Variant2">Answer option 2</string>
+    <string name="Variant3">Answer option 3</string>
+    <string name="Understand2">Understood</string>
+    <string name="Lets_ask_one_question">Now you know everything, let\'s answer one question.</string>
+    <string name="Lets_go">Let\'s go</string>
 
     <!-- Search Game Test -->
     <!-- Questions -->
-    <string name="Question1">Где зарегистрирована компания Яндекс?</string>
-    <string name="Question2">Сколько запросов обрабатывается в месяц?</string>
-    <string name="Question3">Какое место из всех поисковых систем в России занимает Яндекс?</string>
-    <string name="Question4">Где располагается главный офис Яндекс в Москве?</string>
-    <string name="Question5">Имеет ли компания Яндекс отношение к образованию.</string>
-    <string name="Question6">В каком году был основана поискова система Google?</string>
-    <string name="Question7">Кто владеет поисковой системой Google?</string>
-    <string name="Question8">Имеет ли Google возможность голосового поиска?</string>
-    <string name="Question9">Имеет ли Google встроенный калькулятор?</string>
-    <string name="Question10">В каком году был запущен сервиз Википоиск?</string>
-    <string name="Question11">В состав каких ОП входит Safari?</string>
-    <string name="Question12">Почему был создан Safari?</string>
-    <string name="Question13">Имеет ли Safari блокиратор всплывающих окон?</string>
-    <string name="Question14">Имеет ли Safari функцию поиска текста на странице?</string>
-    <string name="Question15">Имеет ли Safari режим чтения?</string>
+    <string name="Question1">Where is Yandex registered?</string>
+    <string name="Question2">How many requests are processed per month?</string>
+    <string name="Question3">What place does Yandex rank among all search engines in Russia?</string>
+    <string name="Question4">Where is Yandex headquarters in Moscow located?</string>
+    <string name="Question5">Does Yandex have anything to do with education?</string>
+    <string name="Question6">What year was the Google search engine founded?</string>
+    <string name="Question7">Who owns the Google search engine?</string>
+    <string name="Question8">Does Google have voice search capabilities?</string>
+    <string name="Question9">Does Google have a built-in calculator?</string>
+    <string name="Question10">What year was Wikipoisk launched?</string>
+    <string name="Question11">What OPs does Safari include?</string>
+    <string name="Question12">Why was Safari created?</string>
+    <string name="Question13">Does Safari have a pop-up blocker?</string>
+    <string name="Question14">Does Safari have a feature to search for text on a page?</string>
+    <string name="Question15">Does Safari have a reading mode?</string>
 
     <!-- Answers -->
 
-    <string name="Question1_Answer1">Яндекс - это Российская компания, зарегистрированная в Нидерландах.</string>
-    <string name="Question1_Answer2">Яндекс — это Американская компания, зарегистрированная там же.</string>
-    <string name="Question1_Answer3">Яндекс — это компания, зарегистрированная в Москве.</string>
+    <string name="Question1_Answer1">Yandex is a Russian company registered in the Netherlands.</string>
+    <string name="Question1_Answer2">Yandex is an American company registered there.</string>
+    <string name="Question1_Answer3">Yandex is a company registered in Moscow.</string>
 
-    <string name="Question2_Answer1">6.3 миллиардов в месяц (дата: начало 2014).</string>
-    <string name="Question2_Answer2">6 миллиардов в месяц (дата: начало 2014).</string>
-    <string name="Question2_Answer3">6.4 миллиардов в месяц (дата: начало 2014).</string>
+    <string name="Question2_Answer1">6.3 billion per month (date: early 2014).</string>
+    <string name="Question2_Answer2">5 billion per month (date: early 2014).</string>
+    <string name="Question2_Answer3">7 billion per month (date: early 2014).</string>
 
-    <string name="Question3_Answer1">Первое место в России.</string>
-    <string name="Question3_Answer2">Второе место в России.</string>
-    <string name="Question3_Answer3">Яндекс — это не Российская компания.</string>
+    <string name="Question3_Answer1">First place in Russia.</string>
+    <string name="Question3_Answer2">Second place in Russia.</string>
+    <string name="Question3_Answer3">Yandex is not a Russian company.</string>
 
-    <string name="Question4_Answer1">Улица Льва Толстого, дом 16.</string>
-    <string name="Question4_Answer2">Улица Геймерская, дом 7.</string>
-    <string name="Question4_Answer3">Улица Лесная, дома 22.</string>
+    <string name="Question4_Answer1">Lev Tolstoy Street, 16.</string>
+    <string name="Question4_Answer2">Gamerskaya street, house 7.</string>
+    <string name="Question4_Answer3">Lesnaya street, houses 22.</string>
 
-    <string name="Question5_Answer1">Да, например, Яндекс устраивает множество семинаров и разных олимпиад и чемпионатов.</string>
-    <string name="Question5_Answer2">Что такое образование?</string>
-    <string name="Question5_Answer3">Нет, не имеет.</string>
+    <string name="Question5_Answer1">Yes, for example, Yandex organizes many seminars and various Olympiads and championships.</string>
+    <string name="Question5_Answer2">What is education?</string>
+    <string name="Question5_Answer3">No, it doesn\'t.</string>
 
-    <string name="Question6_Answer1">В 1996 году.</string>
-    <string name="Question6_Answer2">В 1998 году.</string>
-    <string name="Question6_Answer3">В 1994 году.</string>
+    <string name="Question6_Answer1">In 1996.</string>
+    <string name="Question6_Answer2">In 1998.</string>
+    <string name="Question6_Answer3">In 1994.</string>
 
     <string name="Question7_Answer1">Google Inc.</string>
     <string name="Question7_Answer2">Yandex.</string>
     <string name="Question7_Answer3">Apple Inc.</string>
 
-    <string name="Question8_Answer1">Да, и уже давно.</string>
-    <string name="Question8_Answer2">Нет.</string>
-    <string name="Question8_Answer3">А что такое голосовой поиск?</string>
+    <string name="Question8_Answer1">Yes, and for a long time.</string>
+    <string name="Question8_Answer2">No.</string>
+    <string name="Question8_Answer3">What is voice search?</string>
 
-    <string name="Question9_Answer1">Да и он многое может.</string>
-    <string name="Question9_Answer2">Нет, ну и так и надо чтобы дети сами считали а не на калькуляторе.</string>
-    <string name="Question9_Answer3">А что вообще такое калькулятор я просто немного подеградировал.</string>
+    <string name="Question9_Answer1">Yes, and he can do a lot.</string>
+    <string name="Question9_Answer2">No, well, that\'s how it is necessary for the children to count themselves and not on a calculator.</string>
+    <string name="Question9_Answer3">And what is a calculator in general, I just degraded a little.</string>
 
-    <string name="Question10_Answer1">В 2009 году.</string>
-    <string name="Question10_Answer2">В 2020 году.</string>
-    <string name="Question10_Answer3">В 2000 году.</string>
+    <string name="Question10_Answer1">In 2009.</string>
+    <string name="Question10_Answer2">In 2020.</string>
+    <string name="Question10_Answer3">In 2000.</string>
 
     <string name="Question11_Answer1">macOS и IOS.</string>
     <string name="Question11_Answer2">Windows.</string>
     <string name="Question11_Answer3">Linux.</string>
 
-    <string name="Question12_Answer1">Потому что договор с Microsoft а точнее на использование Internet Explorer закончился</string>
-    <string name="Question12_Answer2">Потому что просто не на что было деньги тратить.</string>
-    <string name="Question12_Answer3">Потому что им захотелось обзавестись собственным браузером.</string>
+    <string name="Question12_Answer1">Because the contract with Microsoft, or rather for the use of Internet Explorer has ended.</string>
+    <string name="Question12_Answer2">Because there was simply nothing to spend money on.</string>
+    <string name="Question12_Answer3">Because they wanted to get their own browser.</string>
 
-    <string name="Question13_Answer1">Да имеет и это очень полезная вещь.</string>
-    <string name="Question13_Answer2">Нет не имеет.</string>
-    <string name="Question13_Answer3">Я пользуюсь Chrome и мне нормально.</string>
+    <string name="Question13_Answer1">Yes, and it is a very useful thing.</string>
+    <string name="Question13_Answer2">No, it doesn\'t.</string>
+    <string name="Question13_Answer3">I use Chrome and I\'m fine.</string>
 
-    <string name="Question14_Answer1">Да, имеет и я ей активно пользуюсь.</string>
-    <string name="Question14_Answer2">Нет или не знаю.</string>
-    <string name="Question14_Answer3">Да, только я ей не пользуюсь.</string>
+    <string name="Question14_Answer1">Yes, it does, and I actively use it.</string>
+    <string name="Question14_Answer2">No, or I don\'t know.</string>
+    <string name="Question14_Answer3">Yes, only I don\'t use it.</string>
 
-    <string name="Question15_Answer1">Да очень полезная вещь.</string>
-    <string name="Question15_Answer2">Нет а что это.</string>
-    <string name="Question15_Answer3">А что такое режим чтения?</string>
+    <string name="Question15_Answer1">Yes, a very useful thing.</string>
+    <string name="Question15_Answer2">No, what is it.</string>
+    <string name="Question15_Answer3">What is reading mode?</string>
 
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
