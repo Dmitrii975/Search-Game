@@ -49,7 +49,6 @@ class SearchGameTest : AppCompatActivity(){
         answer[13] = arrayOf(resources.getString(R.string.Question14_Answer1), resources.getString(R.string.Question14_Answer2), resources.getString(R.string.Question14_Answer3))
         answer[14] = arrayOf(resources.getString(R.string.Question15_Answer1), resources.getString(R.string.Question15_Answer2), resources.getString(R.string.Question15_Answer3))
 
-
         val question: Array<String> = arrayOf(resources.getString(R.string.Question1),
             resources.getString(R.string.Question2),
             resources.getString(R.string.Question3),
@@ -66,15 +65,7 @@ class SearchGameTest : AppCompatActivity(){
             resources.getString(R.string.Question14),
             resources.getString(R.string.Question15))
 
-        val clazz = MainClass()
-            clazz.main( buttonNext,
-                questionField,
-                answerField1,
-                answerField2,
-                answerField3,
-                question,
-                answer,
-                context,
-                false)
+        val clazz = MainClass(question,answer,buttonNext,questionField,answerField1,answerField2,answerField3,context)
+            clazz.main(false)
     }
 }

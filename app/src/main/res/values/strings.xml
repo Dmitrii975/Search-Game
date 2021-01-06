@@ -7,10 +7,15 @@
     <string name="FinishTextSearchGame">Congratulations! You passed the test Search Game.</string>
     <string name="Back">Back</string>
     <string name="True">Well, answer is true.</string>
-    <string name="False">Alas, the answer is not correct.</string>
+    <string name="False">Alas, the answer is not correct. Correct answer: </string>
     <string name="Search_Game">Search Game</string>
 
-     Для обучения
+
+    <!-- Настройки -->
+    <string name="Text_Size">Text size.</string>
+    <string name="Language">Language.</string>
+
+    <!-- Для обучения -->
     <string name="Hello">Welcome to Search Game! In this game you have to take tests on various topics. I hope, you like it.</string>
     <string name="Understand">Understandably</string>
     <string name="Question">Question</string>
@@ -27,21 +32,23 @@
 
     <!-- Search Game Test -->
     <!-- Questions -->
-    <string name="Question1">Where is Yandex registered?</string>
-    <string name="Question2">How many requests are processed per month?</string>
-    <string name="Question3">What place does Yandex rank among all search engines in Russia?</string>
-    <string name="Question4">Where is Yandex headquarters in Moscow located?</string>
-    <string name="Question5">Does Yandex have anything to do with education?</string>
-    <string name="Question6">What year was the Google search engine founded?</string>
-    <string name="Question7">Who owns the Google search engine?</string>
-    <string name="Question8">Does Google have voice search capabilities?</string>
-    <string name="Question9">Does Google have a built-in calculator?</string>
-    <string name="Question10">What year was Wikipoisk launched?</string>
-    <string name="Question11">What OPs does Safari include?</string>
-    <string name="Question12">Why was Safari created?</string>
-    <string name="Question13">Does Safari have a pop-up blocker?</string>
-    <string name="Question14">Does Safari have a feature to search for text on a page?</string>
-    <string name="Question15">Does Safari have a reading mode?</string>
+        <string name="Question1">Where is Yandex registered?</string>
+        <string name="Question2">How many requests are processed per month?</string>
+        <string name="Question3">What place does Yandex rank among all search engines in Russia?</string>
+        <string name="Question4">Where is Yandex headquarters in Moscow located?</string>
+        <string name="Question5">Does Yandex have anything to do with education?</string>
+
+        <string name="Question6">What year was the Google search engine founded?</string>
+        <string name="Question7">Who owns the Google search engine?</string>
+        <string name="Question8">Does Google have voice search capabilities?</string>
+        <string name="Question9">Does Google have a built-in calculator?</string>
+        <string name="Question10">What year was Wikipoisk launched?</string>
+
+        <string name="Question11">What OPs does Safari include?</string>
+        <string name="Question12">Why was Safari created?</string>
+        <string name="Question13">Does Safari have a pop-up blocker?</string>
+        <string name="Question14">Does Safari have a feature to search for text on a page?</string>
+        <string name="Question15">Does Safari have a reading mode?</string>
 
     <!-- Answers -->
 

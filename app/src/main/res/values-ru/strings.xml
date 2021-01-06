@@ -7,10 +7,13 @@
     <string name="FinishTextSearchGame">Поздравляю! Вы прошли тест Search Game!</string>
     <string name="Back">Вернутся</string>
     <string name="True">Отлично, ответ верный</string>
-    <string name="False">Увы, ответ не верный</string>
+    <string name="False">Увы, ответ не верный. Правильный ответ: </string>
     <string name="Search_Game">Search Game</string>
 
-     Для обучения
+    <!-- Настройки -->
+    <string name="Text_Size">Размер шрифта.</string>
+    <string name="Language">Язык.</string>
+     <!-- Для обучения -->
     <string name="Hello">Приветствую тебя в Search Game! В этой игре тебе предстоит проходить тесты на разные темы. Надеюсь тебе понравится.</string>
     <string name="Understand">Понятно</string>
     <string name="Question">Вопрос</string>
@@ -27,21 +30,27 @@
 
     <!-- Search Game Test -->
     <!-- Questions -->
-    <string name="Question1">Где зарегистрирована компания Яндекс?</string>
-    <string name="Question2">Сколько запросов обрабатывается в месяц?</string>
-    <string name="Question3">Какое место из всех поисковых систем в России занимает Яндекс?</string>
-    <string name="Question4">Где располагается главный офис Яндекс в Москве?</string>
-    <string name="Question5">Имеет ли компания Яндекс отношение к образованию.</string>
-    <string name="Question6">В каком году был основана поискова система Google?</string>
-    <string name="Question7">Кто владеет поисковой системой Google?</string>
-    <string name="Question8">Имеет ли Google возможность голосового поиска?</string>
-    <string name="Question9">Имеет ли Google встроенный калькулятор?</string>
-    <string name="Question10">В каком году был запущен сервиз Википоиск?</string>
-    <string name="Question11">В состав каких ОП входит Safari?</string>
-    <string name="Question12">Почему был создан Safari?</string>
-    <string name="Question13">Имеет ли Safari блокиратор всплывающих окон?</string>
-    <string name="Question14">Имеет ли Safari функцию поиска текста на странице?</string>
-    <string name="Question15">Имеет ли Safari режим чтения?</string>
+
+
+        <!-- Yandex -->
+        <string name="Question1">Где зарегистрирована компания Яндекс?</string>
+        <string name="Question2">Сколько запросов обрабатывается в месяц?</string>
+        <string name="Question3">Какое место из всех поисковых систем в России занимает Яндекс?</string>
+        <string name="Question4">Где располагается главный офис Яндекс в Москве?</string>
+        <string name="Question5">Имеет ли компания Яндекс отношение к образованию.</string>
+        <!-- Google -->
+        <string name="Question6">В каком году был основана поискова система Google?</string>
+        <string name="Question7">Кто владеет поисковой системой Google?</string>
+        <string name="Question8">Имеет ли Google возможность голосового поиска?</string>
+        <string name="Question9">Имеет ли Google встроенный калькулятор?</string>
+        <string name="Question10">В каком году был запущен сервиз Википоиск?</string>
+        <!-- Safari -->
+        <string name="Question11">В состав каких ОП входит Safari?</string>
+        <string name="Question12">Почему был создан Safari?</string>
+        <string name="Question13">Имеет ли Safari блокиратор всплывающих окон?</string>
+        <string name="Question14">Имеет ли Safari функцию поиска текста на странице?</string>
+        <string name="Question15">Имеет ли Safari режим чтения?</string>
+
 
     <!-- Answers -->
 
@@ -119,6 +128,5 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
-    <string name="next" translatable="false">Далее</string>
 
 </resources>
