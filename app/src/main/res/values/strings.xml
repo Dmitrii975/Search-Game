@@ -9,6 +9,7 @@
     <string name="True">Well, answer is true.</string>
     <string name="False">Alas, the answer is not correct. Correct answer: </string>
     <string name="Search_Game">Search Game</string>
+    <string name="next">Next</string>
 
 
     <!-- Настройки -->
@@ -29,6 +30,8 @@
     <string name="Understand2">Understood</string>
     <string name="Lets_ask_one_question">Now you know everything, let\'s answer one question.</string>
     <string name="Lets_go">Let\'s go</string>
+    <string name="Lets_go_to_main_activity">Ok, now let\'s go back to the home screen.</string>
+    <string name="Go_to">Go to main screen</string>
 
     <!-- Search Game Test -->
     <!-- Questions -->
@@ -126,6 +129,7 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
-    <string name="next" translatable="false">Далее</string>
+
+
 
 </resources>

@@ -66,6 +66,6 @@ class SearchGameTest : AppCompatActivity(){
             resources.getString(R.string.Question15))
 
         val clazz = MainClass(question,answer,buttonNext,questionField,answerField1,answerField2,answerField3,context)
-            clazz.main(false)
+            clazz.main(isEnd = false)
     }
 }

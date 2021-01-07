@@ -9,6 +9,7 @@
     <string name="True">Отлично, ответ верный</string>
     <string name="False">Увы, ответ не верный. Правильный ответ: </string>
     <string name="Search_Game">Search Game</string>
+    <string name="next">Далее</string>
 
     <!-- Настройки -->
     <string name="Text_Size">Размер шрифта.</string>
@@ -27,6 +28,8 @@
     <string name="Understand2">Уяснил(а)</string>
     <string name="Lets_ask_one_question">Теперь ты все знаешь давай-ка ответим на один вопрос.</string>
     <string name="Lets_go">Давай</string>
+    <string name="Lets_go_to_main_activity">Отлично, теперь давай вернемся на главный экран.</string>
+    <string name="Go_to">Перейти на главный экран</string>
 
     <!-- Search Game Test -->
     <!-- Questions -->
