@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
 import androidx.core.content.ContextCompat.startActivity
 import com.dmitry.searchgame.R
@@ -22,6 +23,7 @@ class MainClass(
 {
     private var counter = 0
     private val array: Array<String> = Array(3){ "" }
+    private lateinit var buttonRestart: Button
 
     @SuppressLint("SetTextI18n")
     fun main(isEnd: Boolean) {
@@ -125,9 +127,9 @@ class MainClass(
     }
 
 
-    fun mainForTraining(isEnd: Boolean) {
+    fun mainForTraining(isEnd: Boolean, vararg buttonRestart: Button) {
+
         buttonNext.setOnClickListener {}
-        
         if (isEnd) {
             questionField.text = context.resources.getString(R.string.Lets_go_to_main_activity)
                 answerField1.text = ""
@@ -171,6 +173,7 @@ class MainClass(
                 answerField1.setOnClickListener { answerFalseForTraining(); isEndForTraining() }
             }
         }
+
     }
 
     private fun whatTrueForTraining(): String{
@@ -200,8 +203,9 @@ class MainClass(
         answerField2.isClickable = false
         answerField3.isClickable = false
     }
+
     @SuppressLint("SetTextI18n")
-    private fun answerFalseForTraining(){
+    fun answerFalseForTraining(){
         questionField.text = "${context.resources.getString(R.string.False)} ${whatTrueForTraining()}"
         answerField1.text = ""
         answerField2.text = ""
@@ -209,6 +213,8 @@ class MainClass(
         answerField1.isClickable = false
         answerField2.isClickable = false
         answerField3.isClickable = false
+        buttonRestart.visibility = View.VISIBLE
+        buttonRestart.isClickable = true
     }
 
     private fun mixArraysForTraining(){
@@ -230,5 +236,8 @@ class MainClass(
             else
                 mainForTraining(isEnd = false)
         }
+    }
+    fun set_button_restart(button: Button){
+        buttonRestart = button
     }
 }

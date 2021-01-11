@@ -2,12 +2,9 @@ package com.dmitry.searchgame.searchgametest
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.TextView
-import androidx.core.content.ContextCompat
 import com.dmitry.searchgame.R
 import kotlinx.android.synthetic.main.activity_training.*
 
@@ -56,17 +53,18 @@ class Training : AppCompatActivity() {
                                     answerField3.text = ""
                                         buttonNext.text = resources.getString(R.string.Lets_go)
                         buttonNext.setOnClickListener {
-                            buttonRestart.visibility = View.VISIBLE
-                            buttonRestart.isClickable = true
-
                             buttonRestart.setOnClickListener {
                                 buttonNext.text = resources.getString(R.string.next)
                                 val main2 = MainClass(q,a,buttonNext, questionField, answerField1, answerField2, answerField3, context)
-                                main2.mainForTraining(isEnd = false)
+                                    main2.set_button_restart(buttonRestart)
+                                        main2.mainForTraining(isEnd = false)
+                                buttonRestart.visibility = View.INVISIBLE
+                                    buttonRestart.isClickable = false
                             }
                             buttonNext.text = resources.getString(R.string.next)
                             val main = MainClass(q,a,buttonNext, questionField, answerField1, answerField2, answerField3, context)
-                                main.mainForTraining(isEnd = false)
+                                main.set_button_restart(buttonRestart)
+                                    main.mainForTraining(isEnd = false)
                         }
                     }
              }   }

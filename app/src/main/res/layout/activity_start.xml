@@ -9,30 +9,37 @@
     android:background="@drawable/fon"
     tools:context=".searchgametest.StartActivity">
 
-    <Button
-    android:text="@string/Start"
-    android:id="@+id/ButtonStart"
-    android:layout_width="200sp"
-    android:layout_height="50sp"
-    android:background="@drawable/btn_ripple"
-    android:layout_marginTop="400sp"
-    android:layout_marginStart="100sp"
-    android:textStyle="italic"
-        android:fontFamily="@font/regular"
-    android:textColor="@android:color/black">
-    </Button>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/ButtonStart"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:background="@drawable/btn_ripple"
+                android:textStyle="italic"
+                android:fontFamily="@font/regular"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="400dp"
+                android:text="@string/Start">
+            </Button>
+        </RelativeLayout>
 
-    <Button
-        android:text="@string/Training"
-        android:id="@+id/ButtonTraining"
-        android:layout_width="200sp"
-        android:layout_height="50sp"
-        android:background="@drawable/btn_ripple"
-        android:layout_marginTop="500sp"
-        android:layout_marginStart="100sp"
-        android:textStyle="italic"
-        android:fontFamily="@font/regular"
-        android:textColor="@android:color/black">
-    </Button>
-
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/ButtonTraining"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_ripple"
+            android:textStyle="italic"
+            android:fontFamily="@font/regular"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="470dp"
+            android:text="@string/Training">
+        </Button>
+    </RelativeLayout>
 </RelativeLayout>

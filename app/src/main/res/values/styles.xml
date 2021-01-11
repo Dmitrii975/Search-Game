@@ -9,7 +9,8 @@
 
     <style name="MainText">
         <item name="android:textColor">@android:color/black</item>
-        <item name="android:layout_margin">20dp</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
         <item name="android:textSize">14sp</item>
     </style>
     <style name="st">

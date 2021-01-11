@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,27 +7,39 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".searchgametest.SearchGameFinish">
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:gravity="center"
-        android:text="@string/FinishTextSearchGame"
-        style="@style/MainText">
-    </TextView>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/FinishButton"
-        android:background="@drawable/btn_ripple"
-        android:layout_width="100dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="300dp"
-        android:layout_marginTop="400dp"
-        android:textSize="15sp"
-        android:textColor="@android:color/black"
-        android:textStyle="italic"
-        android:gravity="center"
-        android:text="@string/Back">
-    </TextView>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:gravity="center"
+                    android:text="@string/FinishTextSearchGame"
+                    style="@style/MainText">
+                </TextView>
+        </RelativeLayout>
 
-</LinearLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/FinishButton"
+                android:background="@drawable/btn_ripple"
+                android:layout_width="100dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="300dp"
+                android:layout_marginTop="400dp"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:textStyle="italic"
+                android:gravity="center"
+                android:text="@string/Back">
+            </TextView>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
