@@ -31,9 +31,8 @@ class Training : AppCompatActivity() {
 
 
 
-        q[0] = "2 + 2 * 2"
-        a[0] = arrayOf("6","8","4")
-
+        val question = Question( "2 + 2 * 2","6","8","4")
+        val array = arrayOf(question)
         questionField.text = resources.getString(R.string.Hello)
         buttonNext.text = resources.getString(R.string.Understand)
 
@@ -55,16 +54,14 @@ class Training : AppCompatActivity() {
                         buttonNext.setOnClickListener {
                             buttonRestart.setOnClickListener {
                                 buttonNext.text = resources.getString(R.string.next)
-                                val main2 = MainClass(q,a,buttonNext, questionField, answerField1, answerField2, answerField3, context)
-                                    main2.set_button_restart(buttonRestart)
-                                        main2.mainForTraining(isEnd = false)
+                                val main2 = MainClass(array,buttonNext, questionField, answerField1, answerField2, answerField3, buttonRestart,context, true)
+                                        main2.main(isEnd = false)
                                 buttonRestart.visibility = View.INVISIBLE
                                     buttonRestart.isClickable = false
                             }
                             buttonNext.text = resources.getString(R.string.next)
-                            val main = MainClass(q,a,buttonNext, questionField, answerField1, answerField2, answerField3, context)
-                                main.set_button_restart(buttonRestart)
-                                    main.mainForTraining(isEnd = false)
+                            val main = MainClass(array, buttonNext, questionField, answerField1, answerField2, answerField3, buttonRestart, context, true)
+                                    main.main(isEnd = false)
                         }
                     }
              }   }

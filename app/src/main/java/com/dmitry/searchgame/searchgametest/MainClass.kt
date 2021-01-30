@@ -7,237 +7,153 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
-import androidx.core.content.ContextCompat.startActivity
+import androidx.core.content.ContextCompat
 import com.dmitry.searchgame.R
-import kotlinx.android.synthetic.main.activity_training.*
+
+class Question(val question: String, val answer: String, val answer2:String, val answer3: String){
+    val trueAnswer = answer
+}
 
 class MainClass(
-    private val questions: Array<String>,
-        private val answers: Array<Array<String>>,
-            private val buttonNext: TextView,
-                private val questionField: TextView,
-                    private val answerField1: TextView,
-                        private val answerField2: TextView,
-                            private val answerField3: TextView,
-                                private val context: Context)
+    private val array: Array<Question>,
+        private val buttonNext: TextView,
+            private val questionField: TextView,
+                private val answerField1: TextView,
+                    private val answerField2: TextView,
+                        private val answerField3: TextView,
+                            private val buttonRestart: Button?,
+                                private val context: Context,
+                                    private val isTraining: Boolean)
 {
-    private var counter = 0
-    private val array: Array<String> = Array(3){ "" }
-    private lateinit var buttonRestart: Button
+    var trueAnswers: Int = 0
+    private var counter = 0 // счетчик (по нему все контролим)
+    private val mixedArray: Array<String> = Array(3){ "" } // массив под перемешанные вопросы
 
     @SuppressLint("SetTextI18n")
-    fun main(isEnd: Boolean) {
-            buttonNext.setOnClickListener {}
+    fun main(isEnd: Boolean){ // главная функция
+        buttonNext.setOnClickListener {} // обнуляем кликер
+        if (isTraining) // если мы на обуении
+            if (isEnd){ // проверяем конец ли
+                questionField.text = context.resources.getString(R.string.Lets_go_to_main_activity)
+                    answerField1.text = ""
+                        answerField2.text = ""
+                            answerField3.text = ""
+                                buttonNext.text = context.resources.getString(R.string.Go_to)
 
-                if (isEnd) {
-                    val i = Intent(context, SearchGameFinish::class.java)
+                buttonNext.setOnClickListener { // если все вопросы закончились мы предлагаем перейти на главный экран и ставим обработик
+                    // ------------ Магия ------------
+                    val i = Intent(context, StartActivity::class.java)
                     val b: Bundle? = i.extras
-                    startActivity(context, i, b)
-                    return
+                    ContextCompat.startActivity(context, i, b)
                 }
-
-            mixArrays()
-
-            questionField.text = questions[counter]
-                answerField1.text = array[0]
-                    answerField2.text = array[1]
-                        answerField3.text = array[2]
-            answerField1.isClickable = true
-                answerField2.isClickable = true
-                    answerField3.isClickable = true
-
-            when (getField(array, answers)){
-                1 -> {
-                    answerField1.setOnClickListener { answerTrue(); isEnd() }
-                        answerField2.setOnClickListener { answerFalse(); isEnd() }
-                            answerField3.setOnClickListener { answerFalse(); isEnd()
-            }
-                }
-                2 -> {
-                    answerField2.setOnClickListener { answerTrue(); isEnd() }
-                        answerField1.setOnClickListener { answerFalse(); isEnd() }
-                            answerField3.setOnClickListener { answerFalse(); isEnd() }
-                }
-                3 -> {
-                    answerField3.setOnClickListener { answerTrue(); isEnd() }
-                        answerField2.setOnClickListener { answerFalse(); isEnd() }
-                            answerField1.setOnClickListener { answerFalse(); isEnd() }
-                }
+                return
             }
 
-    }
+            if (isEnd){ // если мы не в обучении и у нас конец массива вопросов/ответов
+                questionField.text = context.resources.getString(R.string.FinishTextSearchGame) + context.resources.getString(R.string.HowManyTrueAnswer1) +
+                        " $trueAnswers " + context.resources.getString(R.string.HowManyTrueAnswer2) + " 15 " + context.resources.getString(R.string.HowManyTrueAnswer3)
+                answerField1.text = ""
+                answerField2.text = ""
+                answerField3.text = ""
+                buttonNext.text = context.resources.getString(R.string.End)
+                buttonNext.setOnClickListener {
+                    val i = Intent(context, StartActivity::class.java)
+                    val b: Bundle? = i.extras
+                    ContextCompat.startActivity(context, i, b)
+                }
+                return
+            }
 
-    private fun whatTrue(): String{
-        return when {
-            getField(array,answers) == 1 -> answerField1.text.toString()
-                getField(array,answers) == 2 -> answerField2.text.toString()
-                    getField(array,answers) == 3 -> answerField3.text.toString()
-            else -> ""
+            mixArrays() // мешаем вопросы и помещаем их в отдельный массив
+                setText() // устанавливаем вопрос и ответы
+                   setClickersForFields() // ставим обработики для полей с вариантами ответа
+    }
+    private fun setText(){
+        questionField.text = array[counter].question
+            answerField1.text = mixedArray[0]
+                answerField2.text = mixedArray[1]
+                    answerField3.text = mixedArray[2]
+    } // установка текста
+        private fun setClickersForFields(){
+        when(getTrueField()){
+            1 -> {
+                answerField1.setOnClickListener { answerTrue(); setClickerForButtonNext() }
+                    answerField2.setOnClickListener { answerFalse(); setClickerForButtonNext() }
+                        answerField3.setOnClickListener { answerFalse(); setClickerForButtonNext() }
+            }
+            2 -> {
+                answerField1.setOnClickListener { answerFalse(); setClickerForButtonNext() }
+                    answerField2.setOnClickListener { answerTrue(); setClickerForButtonNext() }
+                        answerField3.setOnClickListener { answerFalse(); setClickerForButtonNext() }
+            }
+            3 -> {
+                answerField1.setOnClickListener { answerFalse(); setClickerForButtonNext() }
+                    answerField2.setOnClickListener { answerFalse(); setClickerForButtonNext() }
+                        answerField3.setOnClickListener { answerTrue(); setClickerForButtonNext() }
+            }
         }
-
-    }
-
-    private fun getField(q1: Array<String>, q2: Array<Array<String>>): Int {
-        return when {
-            q1[0] == q2[counter][0] -> 1
-                q1[1] == q2[counter][0] -> 2
-                    q1[2] == q2[counter][0] -> 3
-            else -> 0
-        }
-    }
-    private fun answerTrue(){
-        questionField.text = context.resources.getString(R.string.True)
-        answerField1.text = ""
-        answerField2.text = ""
-        answerField3.text = ""
-        answerField1.isClickable = false
-        answerField2.isClickable = false
-        answerField3.isClickable = false
-    }
-    @SuppressLint("SetTextI18n")
-    private fun answerFalse(){
-        questionField.text = "${context.resources.getString(R.string.False)} ${whatTrue()}"
-        answerField1.text = ""
-        answerField2.text = ""
-        answerField3.text = ""
-        answerField1.isClickable = false
-        answerField2.isClickable = false
-        answerField3.isClickable = false
-    }
-
-    private fun mixArrays(){
-        array[0] = answers[counter][0]
-        array[1] = answers[counter][1]
-        array[2] = answers[counter][2]
-
-        for (i in 0..2){
-            val rand1 = (0 until 3).random()
-            val rand2 = (0 until 3).random()
-            array[rand1] = array[rand2].also{ array[rand2] = array[rand1]}
-        }
-    }
-    private fun isEnd() {
+    } // устанавливаем OnClickListener
+            private fun setClickerForButtonNext(){
         buttonNext.setOnClickListener {
             counter++
-            if (counter == questions.size)
+            if (counter == array.size)
                 main(isEnd = true)
             else
                 main(isEnd = false)
+
         }
-    }
-
-
-    fun mainForTraining(isEnd: Boolean, vararg buttonRestart: Button) {
-
-        buttonNext.setOnClickListener {}
-        if (isEnd) {
-            questionField.text = context.resources.getString(R.string.Lets_go_to_main_activity)
-                answerField1.text = ""
-                    answerField2.text = ""
-                        answerField3.text = ""
-            buttonNext.text = context.resources.getString(R.string.Go_to)
-
-            buttonNext.setOnClickListener {
-                val i = Intent(context, StartActivity::class.java)
-                    val b: Bundle? = i.extras
-                        startActivity(context, i, b)
-            }
-            return
-        }
-
-        mixArraysForTraining()
-
-        questionField.text = questions[counter]
-        answerField1.text = array[0]
-        answerField2.text = array[1]
-        answerField3.text = array[2]
-        answerField1.isClickable = true
-        answerField2.isClickable = true
-        answerField3.isClickable = true
-
-        when (getFieldForTraining(array, answers)){
-            1 -> {
-                answerField1.setOnClickListener { answerTrueForTraining(); isEndForTraining() }
-                answerField2.setOnClickListener { answerFalseForTraining(); isEndForTraining() }
-                answerField3.setOnClickListener { answerFalseForTraining(); isEndForTraining()
-                }
-            }
-            2 -> {
-                answerField2.setOnClickListener { answerTrueForTraining(); isEndForTraining() }
-                answerField1.setOnClickListener { answerFalseForTraining(); isEndForTraining() }
-                answerField3.setOnClickListener { answerFalseForTraining(); isEndForTraining() }
-            }
-            3 -> {
-                answerField3.setOnClickListener { answerTrueForTraining(); isEndForTraining() }
-                answerField2.setOnClickListener { answerFalseForTraining(); isEndForTraining() }
-                answerField1.setOnClickListener { answerFalseForTraining(); isEndForTraining() }
-            }
-        }
-
-    }
-
-    private fun whatTrueForTraining(): String{
-        return when {
-            getFieldForTraining(array,answers) == 1 -> answerField1.text.toString()
-            getFieldForTraining(array,answers) == 2 -> answerField2.text.toString()
-            getFieldForTraining(array,answers) == 3 -> answerField3.text.toString()
-            else -> ""
-        }
-
-    }
-
-    private fun getFieldForTraining(q1: Array<String>, q2: Array<Array<String>>): Int {
-        return when {
-            q1[0] == q2[counter][0] -> 1
-            q1[1] == q2[counter][0] -> 2
-            q1[2] == q2[counter][0] -> 3
-            else -> 0
-        }
-    }
-    private fun answerTrueForTraining(){
-        questionField.text = context.resources.getString(R.string.True)
-        answerField1.text = ""
-        answerField2.text = ""
-        answerField3.text = ""
-        answerField1.isClickable = false
-        answerField2.isClickable = false
-        answerField3.isClickable = false
-    }
-
-    @SuppressLint("SetTextI18n")
-    fun answerFalseForTraining(){
-        questionField.text = "${context.resources.getString(R.string.False)} ${whatTrueForTraining()}"
-        answerField1.text = ""
-        answerField2.text = ""
-        answerField3.text = ""
-        answerField1.isClickable = false
-        answerField2.isClickable = false
-        answerField3.isClickable = false
-        buttonRestart.visibility = View.VISIBLE
-        buttonRestart.isClickable = true
-    }
-
-    private fun mixArraysForTraining(){
-        array[0] = answers[counter][0]
-        array[1] = answers[counter][1]
-        array[2] = answers[counter][2]
+    } // устанавливаем кликер для кнопки Next
+                private fun mixArrays(){
+        mixedArray[0] = array[counter].answer
+        mixedArray[1] = array[counter].answer2
+        mixedArray[2] = array[counter].answer3
 
         for (i in 0..2){
             val rand1 = (0 until 3).random()
             val rand2 = (0 until 3).random()
-            array[rand1] = array[rand2].also{ array[rand2] = array[rand1]}
+            mixedArray[rand1] = mixedArray[rand2].also{ mixedArray[rand2] = mixedArray[rand1]}
         }
-    }
-    private fun isEndForTraining() {
-        buttonNext.setOnClickListener {
-            counter++
-            if (counter == questions.size)
-                mainForTraining(isEnd = true)
-            else
-                mainForTraining(isEnd = false)
+    } // мешаем вопросы и в массив
+                    private fun getTrueField(): Int{
+        return when (array[counter].trueAnswer) {
+            mixedArray[0] -> 1
+                mixedArray[1] -> 2
+                    mixedArray[2] -> 3
+            else -> 0
         }
-    }
-    fun set_button_restart(button: Button){
-        buttonRestart = button
-    }
+    } // давай погадаем где правильный ответ
+                        private fun answerTrue(){
+    trueAnswers++
+        questionField.text = context.getString(R.string.True)
+            answerField1.text = ""
+                answerField2.text = ""
+                    answerField3.text = ""
+        answerField1.isClickable = false
+            answerField2.isClickable = false
+                answerField3.isClickable = false
+    } // ответ верный
+                            @SuppressLint("SetTextI18n")
+                                private fun answerFalse(){
+        if (isTraining) {
+            questionField.text = "${context.getString(R.string.False)} ${array[counter].trueAnswer}"
+                answerField1.text = ""
+                    answerField2.text = ""
+                        answerField3.text = ""
+            answerField1.isClickable = false
+                answerField2.isClickable = false
+                    answerField3.isClickable = false
+            buttonRestart?.visibility = View.VISIBLE
+                buttonRestart?.isClickable = true
+
+        }
+        else{
+            questionField.text = "${context.getString(R.string.False)} ${array[counter].trueAnswer}"
+                answerField1.text = ""
+                    answerField2.text = ""
+                        answerField3.text = ""
+            answerField1.isClickable = false
+                answerField2.isClickable = false
+                    answerField3.isClickable = false
+        }
+    } // ответ не верный
 }

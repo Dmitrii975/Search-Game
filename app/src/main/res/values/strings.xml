@@ -4,17 +4,16 @@
     <string name="Start">Start</string>
     <string name="Training">Training</string>
     <string name="back">Back</string>
-    <string name="FinishTextSearchGame">Congratulations! You passed the test Search Game.</string>
+    <string name="FinishTextSearchGame">Congratulations! You passed the test Search Game. </string>
     <string name="Back">Back</string>
     <string name="True">Well, answer is true.</string>
     <string name="False">Alas, the answer is not correct. Correct answer: </string>
     <string name="Search_Game">Search Game</string>
     <string name="next">Next</string>
-
-
-    <!-- Настройки -->
-    <string name="Text_Size">Text size.</string>
-    <string name="Language">Language.</string>
+    <string name="HowManyTrueAnswer1">You answered </string>
+    <string name="HowManyTrueAnswer2"> out of </string>
+    <string name="HowManyTrueAnswer3"> questions correctly.</string>
+    <string name="End">To complete</string>
 
     <!-- Для обучения -->
     <string name="Hello">Welcome to Search Game! In this game you have to take tests on various topics. I hope, you like it.</string>
@@ -54,7 +53,6 @@
         <string name="Question15">Does Safari have a reading mode?</string>
 
     <!-- Answers -->
-
     <string name="Question1_Answer1">Yandex is a Russian company registered in the Netherlands.</string>
     <string name="Question1_Answer2">Yandex is an American company registered there.</string>
     <string name="Question1_Answer3">Yandex is a company registered in Moscow.</string>

@@ -4,16 +4,17 @@
     <string name="Start">Начать</string>
     <string name="Training">Обучение</string>
     <string name="back">Назад</string>
-    <string name="FinishTextSearchGame">Поздравляю! Вы прошли тест Search Game!</string>
+    <string name="FinishTextSearchGame">Поздравляю! Вы прошли тест Search Game! </string>
     <string name="Back">Вернутся</string>
     <string name="True">Отлично, ответ верный</string>
     <string name="False">Увы, ответ не верный. Правильный ответ: </string>
     <string name="Search_Game">Search Game</string>
     <string name="next">Далее</string>
+    <string name="HowManyTrueAnswer1">Ты ответил на </string>
+    <string name="HowManyTrueAnswer2"> вопросов из </string>
+    <string name="HowManyTrueAnswer3"> правильно.</string>
+    <string name="End">Завершить</string>
 
-    <!-- Настройки -->
-    <string name="Text_Size">Размер шрифта.</string>
-    <string name="Language">Язык.</string>
      <!-- Для обучения -->
     <string name="Hello">Приветствую тебя в Search Game! В этой игре тебе предстоит проходить тесты на разные темы. Надеюсь тебе понравится.</string>
     <string name="Understand">Понятно</string>
